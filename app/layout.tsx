@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next';
+
 import type { Metadata } from 'next';
 
 import { Inter, JetBrains_Mono } from 'next/font/google';
@@ -31,6 +33,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${jetbrains.variable} antialiased`}>
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
